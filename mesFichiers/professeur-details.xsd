@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://formation.uvs.sn/professeur" 
+xmlns:tns="http://formation.uvs.sn/professeur" elementFormDefault="qualified">
+
+<xs:element name="GetProfDetailsRequest">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="id" type="xs:int"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+	
+<xs:element name="GetProfDetailsResponse">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="profDetails" type="tns:profDetails"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="GetAllProfDetailsRequest">
+	<xs:complexType>
+	</xs:complexType>
+</xs:element>
+	
+<xs:element name="GetAllProfDetailsResponse">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="profDetails" type="tns:profDetails" 
+			maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="DeleteProfDetailsResponse">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="status" type="tns:Status"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:simpleType name="Status">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="SUCCESS"/>
+		<xs:enumeration value="FAILLURE"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="profDetails">
+		<xs:sequence>
+			<xs:element name="id" type="xs:int"/>
+			<xs:element name="nomProf" type="xs:string"/>
+			<xs:element name="prenomProf" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

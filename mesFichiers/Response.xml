@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetProfDetailsResponse xmlns="http://formation.uvs.sn/professeur"
+xsi:schemaLocation="http://formation.uvs.sn/professeur professeur-details.xsd"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<profDetails>
+	<id>1</id>
+	<nomProf>Thiongane</nomProf>
+	<prenomProf>Baidy</prenomProf>
+	</profDetails>
+</GetProfDetailsResponse>
